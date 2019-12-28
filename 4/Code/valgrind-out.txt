@@ -1,0 +1,98 @@
+==15517== Memcheck, a memory error detector
+==15517== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==15517== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==15517== Command: ./distributed_search
+==15517== Parent PID: 15516
+==15517== 
+--15517-- 
+--15517-- Valgrind options:
+--15517--    --leak-check=full
+--15517--    --show-leak-kinds=all
+--15517--    --track-origins=yes
+--15517--    --verbose
+--15517--    --log-file=valgrind-out.txt
+--15517-- Contents of /proc/version:
+--15517--   Linux version 4.4.0-21-generic (buildd@lgw01-06) (gcc version 5.3.1 20160413 (Ubuntu 5.3.1-14ubuntu2) ) #37-Ubuntu SMP Mon Apr 18 18:34:49 UTC 2016
+--15517-- 
+--15517-- Arch and hwcaps: X86, LittleEndian, x86-mmxext-sse1-sse2-sse3-lzcnt
+--15517-- Page sizes: currently 4096, max supported 4096
+--15517-- Valgrind library directory: /usr/lib/valgrind
+--15517-- Reading syms from /lib/i386-linux-gnu/ld-2.23.so
+--15517--   Considering /lib/i386-linux-gnu/ld-2.23.so ..
+--15517--   .. CRC mismatch (computed 596cb2b8 wanted 417b32cc)
+--15517--   Considering /usr/lib/debug/lib/i386-linux-gnu/ld-2.23.so ..
+--15517--   .. CRC is valid
+--15517-- Reading syms from /media/sf_shared/VSCODE/oscode/4/distributed_search
+--15517-- Reading syms from /usr/lib/valgrind/memcheck-x86-linux
+--15517--   Considering /usr/lib/valgrind/memcheck-x86-linux ..
+--15517--   .. CRC mismatch (computed 6036da3f wanted 652e483f)
+--15517--    object doesn't have a symbol table
+--15517--    object doesn't have a dynamic symbol table
+--15517-- Scheduler: using generic scheduler lock implementation.
+--15517-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==15517== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-15517-by-root-on-???
+==15517== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-15517-by-root-on-???
+==15517== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-15517-by-root-on-???
+==15517== 
+==15517== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==15517== don't want to do, unless you know exactly what you're doing,
+==15517== or are doing some strange experiment):
+==15517==   /usr/lib/valgrind/../../bin/vgdb --pid=15517 ...command...
+==15517== 
+==15517== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==15517==   /path/to/gdb ./distributed_search
+==15517== and then give GDB the following command
+==15517==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=15517
+==15517== --pid is optional if only one valgrind process is running
+==15517== 
+--15517-- REDIR: 0x4018eb0 (ld-linux.so.2:strlen) redirected to 0x380490f2 (???)
+--15517-- REDIR: 0x4018c70 (ld-linux.so.2:index) redirected to 0x380490cd (???)
+--15517-- Reading syms from /usr/lib/valgrind/vgpreload_core-x86-linux.so
+--15517--   Considering /usr/lib/valgrind/vgpreload_core-x86-linux.so ..
+--15517--   .. CRC mismatch (computed 5b95c0c4 wanted 39e79efa)
+--15517--    object doesn't have a symbol table
+--15517-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so
+--15517--   Considering /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so ..
+--15517--   .. CRC mismatch (computed 4d5a1526 wanted 33571d5b)
+--15517--    object doesn't have a symbol table
+==15517== WARNING: new redirection conflicts with existing -- ignoring it
+--15517--     old: 0x04018eb0 (strlen              ) R-> (0000.0) 0x380490f2 ???
+--15517--     new: 0x04018eb0 (strlen              ) R-> (2007.0) 0x0402f410 strlen
+--15517-- Reading syms from /lib/i386-linux-gnu/libpthread-2.23.so
+--15517--   Considering /usr/lib/debug/.build-id/12/78da59ecc0791dce5c44d8b8756a0480be3a5b.debug ..
+--15517--   .. build-id is valid
+--15517-- Reading syms from /lib/i386-linux-gnu/libc-2.23.so
+--15517--   Considering /lib/i386-linux-gnu/libc-2.23.so ..
+--15517--   .. CRC mismatch (computed af9c0474 wanted a5de3f2a)
+--15517--   Considering /usr/lib/debug/lib/i386-linux-gnu/libc-2.23.so ..
+--15517--   .. CRC is valid
+--15517-- REDIR: 0x40de4b0 (libc.so.6:strncasecmp) redirected to 0x4026560 (_vgnU_ifunc_wrapper)
+--15517-- REDIR: 0x40e5140 (libc.so.6:memrchr) redirected to 0x4026560 (_vgnU_ifunc_wrapper)
+--15517-- REDIR: 0x40f7b20 (libc.so.6:wcslen) redirected to 0x4026560 (_vgnU_ifunc_wrapper)
+--15517-- REDIR: 0x40dd350 (libc.so.6:strstr) redirected to 0x4033700 (strstr)
+--15517-- REDIR: 0x40dc7e0 (libc.so.6:__GI_strrchr) redirected to 0x402ee00 (__GI_strrchr)
+--15517-- REDIR: 0x40e01b0 (libc.so.6:__GI___rawmemchr) redirected to 0x4033110 (__GI___rawmemchr)
+--15517-- REDIR: 0x40dc5c0 (libc.so.6:__GI_strlen) redirected to 0x402f390 (__GI_strlen)
+--15517-- REDIR: 0x40d7f00 (libc.so.6:malloc) redirected to 0x402c110 (malloc)
+--15517-- REDIR: 0x40de680 (libc.so.6:__GI_memcpy) redirected to 0x4030fb0 (__GI_memcpy)
+--15517-- REDIR: 0x40d8810 (libc.so.6:calloc) redirected to 0x402e010 (calloc)
+--15517-- REDIR: 0x40e0280 (libc.so.6:strchrnul) redirected to 0x40330b0 (strchrnul)
+--15517-- REDIR: 0x40de0d0 (libc.so.6:__GI_mempcpy) redirected to 0x40332c0 (__GI_mempcpy)
+--15517-- REDIR: 0x40d8470 (libc.so.6:free) redirected to 0x402d2f0 (free)
+--15517-- REDIR: 0x40ddf60 (libc.so.6:__GI_memmove) redirected to 0x4032ad0 (__GI_memmove)
+--15517-- REDIR: 0x40dc580 (libc.so.6:strlen) redirected to 0x4026560 (_vgnU_ifunc_wrapper)
+--15517-- REDIR: 0x40e5440 (libc.so.6:__strlen_sse2_bsf) redirected to 0x402f370 (strlen)
+--15517-- Reading syms from /lib/i386-linux-gnu/libgcc_s.so.1
+--15517--   Considering /lib/i386-linux-gnu/libgcc_s.so.1 ..
+--15517--   .. CRC mismatch (computed 1733b444 wanted 20ea50ba)
+--15517--    object doesn't have a symbol table
+--15517-- Discarding syms at 0x7e27080-0x7e3cd35 in /lib/i386-linux-gnu/libgcc_s.so.1 due to munmap()
+==15517== 
+==15517== HEAP SUMMARY:
+==15517==     in use at exit: 0 bytes in 0 blocks
+==15517==   total heap usage: 276 allocs, 276 frees, 1,557,902 bytes allocated
+==15517== 
+==15517== All heap blocks were freed -- no leaks are possible
+==15517== 
+==15517== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15517== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
