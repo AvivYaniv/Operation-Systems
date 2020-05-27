@@ -10,6 +10,10 @@ Materials covered: <br/>
 - Memory management, browsing, virtual memory.  <br/>
 - Basics of Computer Networks. <br/>
 
+<p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" width="10%"/>
+<p/>
+
 ## Homework
 [Homework 1](https://github.com/AvivYaniv/Operation-Systems/blob/master/1/os1819a_hw1.pdf) : <br/>
 - A program that reads file and substitues a string occurrences <br/>
