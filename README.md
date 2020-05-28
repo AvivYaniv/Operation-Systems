@@ -11,7 +11,7 @@ Materials covered: <br/>
 - Basics of Computer Networks. <br/>
 
 <p align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" width="15%"/>
+    <img src="https://github.com/AvivYaniv/Operation-Systems/blob/master/logo/Tux.svg" width="15%"/>
 <p/>
 
 ## Homework
