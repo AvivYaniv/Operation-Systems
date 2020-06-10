@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.com/AvivYaniv/Operation-Systems.svg)](http://hits.dwyl.com/AvivYaniv/Operation-Systems)
+
 # Operation-Systems
 
 Working on Ubuntu Linux. <br/>
